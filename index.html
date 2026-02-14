@@ -55,7 +55,8 @@ p {
 .video-bouquet {
     position: relative;
     width: 320px;  /* video width */
-    margin: 40px auto 100px auto; /* bottom margin for button/text */
+    margin: 40px auto 80px auto; /* extra bottom space for button/text */
+    height: auto;  /* let container grow with side images */
 }
 
 .video-bouquet video {
@@ -69,19 +70,23 @@ p {
 
 /* Side Images */
 .image-side {
-	max-width: 180px;  /* bigger size */
-    height: auto;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 130px; /* slightly bigger */
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    flex-shrink: 0; 
+    z-index: 2;   /* in front of video */
 }
 
-.image-side:not(.right) {
-    transform: rotate(-20deg); /* keep slant */
+.image-side.left {
+    left: -65px;  /* half of width so it touches bouquet nicely */
+    transform: translateY(-50%) rotate(-25deg);
 }
 
 .image-side.right {
-    transform: rotate(20deg); /* keep slant */
+    right: -65px;
+    transform: translateY(-50%) rotate(25deg);
 }
 
 button {
@@ -140,12 +145,12 @@ footer {
     <img class="image-side right" src="bemy.jpg" alt="Right Petal">
 </div>
 
-<p style="font-size:0.9em; color:#666;">HAPPY VALENTINE'S DAY BEI 🩷</p>
+<p style="font-size:0.9em; color:#666;"> <strong>HAPPY VALENTINE'S DAY BEI 🩷 </strong></p>
 
 <button onclick="showPoem()">CLICK HERE, BUB!</button>
 
 <div id="poem">
-   <p>Hi bei, Happy Valentine’s Day. Ito lang kaya ko sa ngayon na ibigay sayo also, it's my chance to make bawi to you. <br>
+    <p>Hi bei, Happy Valentine’s Day. Ito lang kaya ko sa ngayon na ibigay sayo also, it's my chance to make bawi to you. <br>
 	I know distance sucks, but I'll do everything to make you feel special. <br> 
         I'm going to take this time to say how much i love you—God knows how much i love you. I'm asking Him to heal every part of you.<br>         
         Gusto ko lang makita ka laging masaya, it makes me feel so comfortable. Pero sa totoo lang, gustong gusto na kita kasama T_T<br>         
@@ -157,7 +162,6 @@ footer {
         i will love you every day, i will choose you every day, at pangakong hihintayin kita. I miss you tons! Tsaka masingit ko lang, <br>                    
         <strong> Ikaw lang pinaka magandang babae na nakilala ko (｡•̀ᴗ-)✧. </strong> I love you so damn much, gorgeous!! 🌷</p>
  </div>
-    
 
 
 <footer>- P.S. XOXO, Bunnyne.</footer>
@@ -173,10 +177,3 @@ function showPoem() {
 
 </body>
 </html>
-
-
-
-
-
-
-
