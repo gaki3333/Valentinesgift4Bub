@@ -55,8 +55,7 @@ p {
 .video-bouquet {
     position: relative;
     width: 320px;  /* video width */
-    margin: 40px auto 80px auto; /* extra bottom space for button/text */
-    height: auto;  /* let container grow with side images */
+    margin: 40px auto 100px auto; /* bottom margin for button/text */
 }
 
 .video-bouquet video {
@@ -73,19 +72,21 @@ p {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    width: 130px; /* slightly bigger */
+    width: 140px;   /* bigger than before */
+    height: auto;
+    max-height: 95%; /* almost full height of video */
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    z-index: 2;   /* in front of video */
+    z-index: 2;     /* in front of video */
 }
 
 .image-side.left {
-    left: -65px;  /* half of width so it touches bouquet nicely */
+    left: -70px;  /* overlap video */
     transform: translateY(-50%) rotate(-25deg);
 }
 
 .image-side.right {
-    right: -65px;
+    right: -70px;
     transform: translateY(-50%) rotate(25deg);
 }
 
@@ -150,8 +151,20 @@ footer {
 <button onclick="showPoem()">CLICK HERE, BUB!</button>
 
 <div id="poem">
-    <p>Hi bei, Happy Valentine’s Day... <br> ...I love you so damn much, gorgeous!! 🌷</p>
-</div>
+   <p>Hi bei, Happy Valentine’s Day. Ito lang kaya ko sa ngayon na ibigay sayo also, it's my chance to make bawi to you. <br>
+	I know distance sucks, but I'll do everything to make you feel special. <br> 
+        I'm going to take this time to say how much i love you—God knows how much i love you. I'm asking Him to heal every part of you.<br>         
+        Gusto ko lang makita ka laging masaya, it makes me feel so comfortable. Pero sa totoo lang, gustong gusto na kita kasama T_T<br>         
+        umuwi ka na kasi edi sana ka-date n akita ngayon! Kidding aside gusto ko lang lagi sayo ipaalala bub, na you can always lean on<br>            
+        me when everything is too much, because i care—i genuinely do care. When the world feels heavy, i want you to know that you're <br>        
+        not alone. You always have me, bubba. your mental and emotional health matter more than anything. i appreciate you, and i am so <br>        
+        proud of everything you do. keep going, baby ko. sobra—you never fail to make me smile. thank you for giving me motivation to <br>        
+        continue living. ikaw ang pinakarason kung bakit gusto kong mabuhay at magpatuloy pa. thank you for making me strong, bubba. <br>        
+        i will love you every day, i will choose you every day, at pangakong hihintayin kita. I miss you tons! Tsaka masingit ko lang, <br>                    
+        <strong> Ikaw lang pinaka magandang babae na nakilala ko (｡•̀ᴗ-)✧. </strong> I love you so damn much, gorgeous!! 🌷</p>
+ </div>
+    
+
 
 <footer>- P.S. XOXO, Bunnyne.</footer>
 
