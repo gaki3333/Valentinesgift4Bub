@@ -69,18 +69,19 @@ p {
 
 /* Side Images */
 .image-side {
-    max-width: 150px; /* increased from 120px before */
+	max-width: 180px;  /* bigger size */
     height: auto;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    flex-shrink: 0; 
 }
 
-.image-side.left {
-    transform: rotate(15deg);
+.image-side:not(.right) {
+    transform: rotate(-20deg); /* keep slant */
 }
 
 .image-side.right {
-  transform: rotate(-15deg);
+    transform: rotate(20deg); /* keep slant */
 }
 
 button {
@@ -172,6 +173,7 @@ function showPoem() {
 
 </body>
 </html>
+
 
 
 
