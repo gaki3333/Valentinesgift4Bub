@@ -65,20 +65,18 @@
             max-width: 320px;     
             margin: 0 auto;        
         }
+.video-center {
+    width: 250px !important;  /* shrink the video container */
+    margin: 0 auto !important; /* center horizontally */
+}
 
-        .video-center {
-            width: 320px !important;      /* fixed width container */
-            margin: 0 auto !important;    /* center horizontally */
-        }
-
-        .video-center video {
-            width: 100% !important;       /* fill only the container */
-            height: auto !important;      /* maintain aspect ratio */
-            max-width: 320px !important;  /* ensures it doesn’t grow */
-            display: block !important;    /* centers video */
-            border-radius: 10px;    
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-        }
+.video-center video {
+    width: 100% !important;   /* fill only the container */
+    height: auto !important;  /* maintain aspect ratio */
+    display: block !important; /* ensure centering works */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
         .image-side img {
             max-width: 250px;
             border-radius: 10px;
@@ -152,8 +150,8 @@
     </div>
 
     <div class="video-bouquet">
-    <div class="image-side">
-        <img src="kiss.jpg" alt="Left Picture">
+        <div class="image-side">
+            <img src="kiss.jpg" alt="Left Picture">
     </div>
 
     <div class="video-center">
@@ -162,6 +160,11 @@
             Your browser does not support the video tag.
         </video>
     </div>
+
+    <div class="image-side right">
+        <img src="bemy.jpg" alt="Right Picture">
+    </div>
+</div>
 
     <div class="image-side right">
         <img src="bemy.jpg" alt="Right Picture">
@@ -199,6 +202,7 @@
 
 </body>
 </html>
+
 
 
 
