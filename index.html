@@ -54,9 +54,9 @@ p {
 /* VIDEO BOUQUET */
 .video-bouquet {
     position: relative;
-    width: 280px;  /* video width */
-    margin: 40px auto;
-    height: 160px; /* enough height for petals */
+    width: 320px;  /* video width */
+    margin: 40px auto 80px auto; /* extra bottom space for button/text */
+    height: auto;  /* let container grow with side images */
 }
 
 .video-bouquet video {
@@ -65,26 +65,27 @@ p {
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     display: block;
     position: relative;
-    z-index: 1;  /* video behind petals */
+    z-index: 1;  /* video behind side images */
 }
 
+/* Side Images */
 .image-side {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    width: 100px;
+    width: 130px; /* slightly bigger */
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    z-index: 2;   /* petals in front */
+    z-index: 2;   /* in front of video */
 }
 
 .image-side.left {
-    left: -50px;
+    left: -65px;  /* half of width so it touches bouquet nicely */
     transform: translateY(-50%) rotate(-25deg);
 }
 
 .image-side.right {
-    right: -50px;
+    right: -65px;
     transform: translateY(-50%) rotate(25deg);
 }
 
@@ -144,7 +145,7 @@ footer {
     <img class="image-side right" src="bemy.jpg" alt="Right Petal">
 </div>
 
-<p style="font-size:0.9em; color:#666; margin-top: 20px;">HAPPY VALENTINE'S DAY BEI 🩷</p>
+<p style="font-size:0.9em; color:#666;">HAPPY VALENTINE'S DAY BEI 🩷</p>
 
 <button onclick="showPoem()">CLICK HERE, BUB!</button>
 
