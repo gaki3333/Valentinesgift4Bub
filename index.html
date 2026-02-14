@@ -62,10 +62,13 @@
             margin: 20px 0;
         }
         .video-center video {
-            max-width: 500px;
-            width: 100%;
+            width: 90%;       /* video takes 90% of its container */
+            max-width: 350px; /* smaller max width */
+            height: auto;     /* keep aspect ratio */
             border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            margin: 0 auto;   /* center it */
+            display: block;   /* ensures centering works */
         }
         .image-side img {
             max-width: 250px;
@@ -183,6 +186,7 @@
 
 </body>
 </html>
+
 
 
 
