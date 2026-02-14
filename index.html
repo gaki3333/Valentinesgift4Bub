@@ -16,6 +16,7 @@
             overflow-x: hidden;
             position: relative;
         }
+
         body::before {
             content: '';
             position: absolute;
@@ -24,6 +25,7 @@
             pointer-events: none;
             z-index: -1;
         }
+
         h1 {
             font-family: 'Dancing Script', cursive;
             color: #ff69b4;
@@ -32,18 +34,21 @@
             text-shadow: 0 0 10px rgba(255,105,180,0.5);
             animation: fadeIn 2s ease-in;
         }
+
         p {
             font-size: 1.2em;
             line-height: 1.5;
             margin: 20px 0;
             animation: fadeIn 2s ease-in 0.5s both;
         }
+
         .bub {
             display: flex;
             justify-content: center;
             gap: 20px;
             flex-wrap: wrap;
         }
+
         .bub img {
             width: 200px;
             border-radius: 10px;
@@ -51,71 +56,64 @@
             box-shadow: 0 4px 8px rgba(0,0,0,0.2);
             transition: transform 0.3s ease;
         }
+
         .bub img:hover {
             transform: scale(1.05);
         }
+
+        /* VIDEO BOUQUET */
         .video-bouquet {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 20px;
-            margin: 20px 0;
+            position: relative;
+            width: 100%;
+            height: 250px;
+            margin: 40px 0;
         }
+
         .video-center {
-            max-width: 320px;     
-            margin: 0 auto;        
+            width: 250px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
         }
-.video-bouquet {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative; /* allow overlapping */
-    margin: 40px 0;
-}
 
-.video-center {
-    width: 300px;         /* smaller video size */
-    z-index: 2;           /* on top of side images */
-    position: relative;
-}
-
-.video-center video {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    display: block;
-}
+        .video-center video {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            display: block;
+        }
 
         .image-side {
-            position: absolute;   /* place around the video */
+            position: absolute;
             top: 50%;
             transform: translateY(-50%);
-            z-index: 1;           /* behind video */
+            z-index: 1;
         }
 
         .image-side.left {
-            left: -80px;          /* adjust horizontal position */
+            left: -80px;
         }
 
         .image-side.right {
-            right: -80px;         /* adjust horizontal position */
+            right: -80px;
         }
 
         .image-side.left img,
         .image-side.right img {
-            max-width: 120px;     /* size of side images */
+            max-width: 120px;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0,0,0,0.2);
         }
 
         .image-side.left img {
-            transform: rotate(-25deg);  /* tilt like bouquet petals */
+            transform: rotate(-25deg);
         }
 
         .image-side.right img {
             transform: rotate(25deg);
         }
+
         button {
             background-color: #ff69b4;
             color: white;
@@ -128,10 +126,12 @@
             box-shadow: 0 4px 8px rgba(0,0,0,0.2);
             transition: all 0.3s ease;
         }
+
         button:hover {
             background-color: #ff1493;
             transform: scale(1.1);
         }
+
         #poem {
             display: none;
             margin-top: 20px;
@@ -140,22 +140,27 @@
             background: rgba(255,255,255,0.8);
             padding: 20px;
             border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
         }
+
         footer {
             margin-top: 40px;
             font-size: 0.8em;
             color: #666;
         }
+
         .heart {
             position: absolute;
             font-size: 2em;
             animation: float 10s linear infinite;
             pointer-events: none;
         }
+
         @keyframes float {
             0% { transform: translateY(100vh); opacity: 1; }
             100% { transform: translateY(-100vh); opacity: 0; }
         }
+
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(20px); }
             to { opacity: 1; transform: translateY(0); }
@@ -165,7 +170,7 @@
 
 <body>
 
-    <!-- floating hearts -->
+    <!-- Floating hearts -->
     <div class="heart" style="left:10%">💖</div>
     <div class="heart" style="left:30%; animation-delay:2s">🌸</div>
     <div class="heart" style="left:50%; animation-delay:4s">💕</div>
@@ -178,22 +183,24 @@
         <img src="pics.jpg" alt="HAPPY VALELEI BEI">
         <img src="bubba.jpg" alt="I LOVE YOU SO MUCH">
     </div>
+
+    <!-- VIDEO BOUQUET -->
     <div class="video-bouquet">
         <div class="image-side left">
             <img src="kiss.jpg" alt="Left Picture">
-    </div>
+        </div>
 
-    <div class="video-center">
-        <video controls autoplay loop playsinline>
-            <source src="vid.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-    </div>
+        <div class="video-center">
+            <video controls autoplay loop playsinline>
+                <source src="vid.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
 
-    <div class="image-side right">
-        <img src="bemy.jpg" alt="Right Picture">
+        <div class="image-side right">
+            <img src="bemy.jpg" alt="Right Picture">
+        </div>
     </div>
-</div>
 
     <p style="font-size:0.9em; color:#666;">HAPPY VALENTINE'S DAY BEI 🩷</p>
 
@@ -226,16 +233,3 @@
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
