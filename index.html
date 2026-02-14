@@ -69,24 +69,21 @@ p {
 
 /* Side Images */
 .image-side {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 200px;   /* same as top pictures */
-    max-height: 100%; /* match video height */
+    width: 180px;  /* Bigger than before */
+    height: auto;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    z-index: 2;  
+    z-index: 2;
+    display: flex;
+    align-items: center;
 }
 
 .image-side.left {
-   left: -90px;  /* overlap video more */
-    transform: translateY(-50%) rotate(-25deg);
+   transform: rotate(-25deg);
 }
 
 .image-side.right {
-    right: -90px;  /* overlap video more */
-    transform: translateY(-50%) rotate(-25deg);;
+    transform: rotate(25deg);
 }
 
 button {
@@ -178,6 +175,7 @@ function showPoem() {
 
 </body>
 </html>
+
 
 
 
