@@ -74,7 +74,7 @@
 }
 
 .video-center {
-    width: 250px;         /* smaller video size */
+    width: 300px;         /* smaller video size */
     z-index: 2;           /* on top of side images */
     position: relative;
 }
@@ -87,36 +87,35 @@
     display: block;
 }
 
-.image-side {
-    position: absolute;   /* place around the video */
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 1;           /* behind video */
-}
+        .image-side {
+            position: absolute;   /* place around the video */
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 1;           /* behind video */
+        }
 
-.image-side.left {
-    left: -80px;          /* adjust horizontal position */
-}
+        .image-side.left {
+            left: -80px;          /* adjust horizontal position */
+        }
 
-.image-side.right {
-    right: -80px;         /* adjust horizontal position */
-}
+        .image-side.right {
+            right: -80px;         /* adjust horizontal position */
+        }
 
-.image-side.left img,
-.image-side.right img {
-    max-width: 120px;     /* size of side images */
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-}
+        .image-side.left img,
+        .image-side.right img {
+            max-width: 120px;     /* size of side images */
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
 
-.image-side.left img {
-    transform: rotate(-25deg);  /* tilt like bouquet petals */
-}
+        .image-side.left img {
+            transform: rotate(-25deg);  /* tilt like bouquet petals */
+        }
 
-.image-side.right img {
-    transform: rotate(25deg);
-}
-}
+        .image-side.right img {
+            transform: rotate(25deg);
+        }
         button {
             background-color: #ff69b4;
             color: white;
@@ -227,6 +226,7 @@
 
 </body>
 </html>
+
 
 
 
