@@ -65,27 +65,58 @@
             max-width: 320px;     
             margin: 0 auto;        
         }
+.video-bouquet {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; /* allow overlapping */
+    margin: 40px 0;
+}
+
 .video-center {
-    width: 250px !important;  /* shrink the video container */
-    margin: 0 auto !important; /* center horizontally */
+    width: 250px;         /* smaller video size */
+    z-index: 2;           /* on top of side images */
+    position: relative;
 }
 
 .video-center video {
-    width: 100% !important;   /* fill only the container */
-    height: auto !important;  /* maintain aspect ratio */
-    display: block !important; /* ensure centering works */
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    display: block;
+}
+
+.image-side {
+    position: absolute;   /* place around the video */
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;           /* behind video */
+}
+
+.image-side.left {
+    left: -80px;          /* adjust horizontal position */
+}
+
+.image-side.right {
+    right: -80px;         /* adjust horizontal position */
+}
+
+.image-side.left img,
+.image-side.right img {
+    max-width: 120px;     /* size of side images */
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
-        .image-side img {
-            max-width: 250px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-            transform: rotate(-15deg);
-        }
-        .image-side.right img {
-            transform: rotate(15deg);
-        }
+
+.image-side.left img {
+    transform: rotate(-25deg);  /* tilt like bouquet petals */
+}
+
+.image-side.right img {
+    transform: rotate(25deg);
+}
+}
         button {
             background-color: #ff69b4;
             color: white;
@@ -148,12 +179,6 @@
         <img src="pics.jpg" alt="HAPPY VALELEI BEI">
         <img src="bubba.jpg" alt="I LOVE YOU SO MUCH">
     </div>
-
-    <div class="video-bouquet">
-        <div class="image-side">
-            <img src="kiss.jpg" alt="Left Picture">
-    </div>
-
     <div class="video-bouquet">
         <div class="image-side left">
             <img src="kiss.jpg" alt="Left Picture">
@@ -202,6 +227,7 @@
 
 </body>
 </html>
+
 
 
 
