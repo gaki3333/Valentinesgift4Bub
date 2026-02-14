@@ -54,9 +54,9 @@ p {
 /* VIDEO BOUQUET */
 .video-bouquet {
     position: relative;
-    width: 300px;       /* Set video width */
+    width: 280px;  /* video width */
     margin: 40px auto;
-    height: 180px;      /* enough height for side petals */
+    height: 160px; /* enough height for petals */
 }
 
 .video-bouquet video {
@@ -64,27 +64,27 @@ p {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     display: block;
-    z-index: 2;
     position: relative;
+    z-index: 1;  /* video behind petals */
 }
 
 .image-side {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    width: 100px; /* size of petal images */
+    width: 100px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    z-index: 1;
+    z-index: 2;   /* petals in front */
 }
 
 .image-side.left {
-    left: -50px;       /* distance from video */
+    left: -50px;
     transform: translateY(-50%) rotate(-25deg);
 }
 
 .image-side.right {
-    right: -50px;      /* distance from video */
+    right: -50px;
     transform: translateY(-50%) rotate(25deg);
 }
 
@@ -144,7 +144,7 @@ footer {
     <img class="image-side right" src="bemy.jpg" alt="Right Petal">
 </div>
 
-<p style="font-size:0.9em; color:#666;">HAPPY VALENTINE'S DAY BEI 🩷</p>
+<p style="font-size:0.9em; color:#666; margin-top: 20px;">HAPPY VALENTINE'S DAY BEI 🩷</p>
 
 <button onclick="showPoem()">CLICK HERE, BUB!</button>
 
@@ -158,7 +158,7 @@ footer {
 <script>
 function showPoem() {
     const poem = document.getElementById('poem');
-    if(poem.style.display==='block'){poem.style.display='none';}else{poem.style.display='block';}
+    poem.style.display = (poem.style.display==='block') ? 'none' : 'block';
     confetti({particleCount:100, spread:70, origin:{y:0.6}});
 }
 </script>
